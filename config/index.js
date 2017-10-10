@@ -30,7 +30,9 @@ module.exports = {
     port: process.env.PORT || 8080,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/dist/',
+    // build 使用如下路径
+    //assetsPublicPath: '/dist/',
+    assetsPublicPath: '/',
     proxyTable: {
       '/api/v1/**': {
         target: 'https://cnodejs.org', // 你接口的域名
