@@ -12,6 +12,8 @@ import '../static/ue/ueditor.config.js'
 import '../static/ue/ueditor.all.min.js'
 import '../static/ue/lang/zh-cn/zh-cn.js'
 import '../static/ue/ueditor.parse.min.js'
+// 配置jquery
+import '../static/js/jquery1.8.2.min.js'
 // 将API方法绑定到全局
 Vue.prototype.$api = api
 // 将工具方法绑定到全局
