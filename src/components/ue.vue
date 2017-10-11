@@ -16,18 +16,17 @@
       config: {}
     },
     mounted () {
-
+      const _this = this
+      this.editor = window.UE.getEditor('editor', this.config)
+      this.editor.addListener('ready', function () {
+        _this.editor.setContent(_this.value)
+      })
     },
     watch: {
       value: {
         handler: function (nowVal, oldVal) {
-          if (nowVal !== '') {
-            this.value = nowVal
-            const _this = this
-            this.editor = window.UE.getEditor('editor', this.config)
-            this.editor.addListener('ready', function () {
-              _this.editor.setContent(_this.value)
-            })
+          if (nowVal !== oldVal) {
+            this.editor.setContent(this.value)
           }
         },
         deep: true
