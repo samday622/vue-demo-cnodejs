@@ -5,6 +5,10 @@
       <ul>
         <li v-for="i in list">
           <time v-text="$utils.goodTime(i.create_at)"></time>
+          <!-- 使用编辑器打开详情 -->
+          <!--<router-link :to="'/uec/'+i.id">
+            {{i.title}}
+          </router-link>-->
           <router-link :to="'/content/'+i.id">
             {{i.title}}
           </router-link>

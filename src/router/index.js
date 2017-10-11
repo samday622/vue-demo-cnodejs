@@ -4,6 +4,7 @@ import Index from '@/page/index'
 import Content from '@/page/content'
 import UET from '@/page/ue_test'
 import JQ from '@/page/jq'
+import UEC from '@/page/ue_content'
 
 Vue.use(Router)
 
@@ -24,6 +25,10 @@ export default new Router({
     {
       path: '/jq',
       component: JQ
+    },
+    {
+      path: '/uec/:id',
+      component: UEC
     }
   ]
 })
