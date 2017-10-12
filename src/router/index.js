@@ -6,6 +6,7 @@ import UET from '@/page/ue_test'
 import JQ from '@/page/jq'
 import UEC from '@/page/ue_content'
 import Father from '@/page/father'
+import Count from '@/page/count'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +34,10 @@ export default new Router({
     {
       path: '/father',
       component: Father
+    },
+    {
+      path: '/count',
+      component: Count
     }
   ]
 })

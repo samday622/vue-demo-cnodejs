@@ -14,6 +14,8 @@ import '../static/ue/lang/zh-cn/zh-cn.js'
 import '../static/ue/ueditor.parse.min.js'
 // 配置jquery
 import '../static/js/jquery1.8.2.min.js'
+// 在main.js 中引入新建的vuex文件
+import store from './vuex/store.js'
 // 将API方法绑定到全局
 Vue.prototype.$api = api
 // 将工具方法绑定到全局
@@ -24,6 +26,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store, // 使用store
   template: '<App/>',
   components: { App }
 })
