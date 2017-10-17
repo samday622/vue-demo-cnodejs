@@ -29,7 +29,12 @@ export default new Vuex.Store({
       commit('DECREMENT')
     },
     incrementWithValue ({commit}, value) {
-      commit('INCREMENT_WITH_VALUE', parseInt(value))
+      let intValue = parseInt(value)
+      if (isNaN(intValue)) {
+        throw new Error('Not an Interger')
+      } else {
+        commit('INCREMENT_WITH_VALUE', intValue)
+      }
     }
   }
 })

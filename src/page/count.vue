@@ -38,7 +38,12 @@
         add: 'increment'
       }),
       incrementWithValue () {
-        this.$store.dispatch('incrementWithValue', this.incrementValue)
+        try {
+          this.$store.dispatch('incrementWithValue', this.incrementValue)
+        } catch (error) {
+          alert(error)
+          this.$router.push({path: '/'})
+        }
       }
     }
   }
